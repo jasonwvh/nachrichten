@@ -7,7 +7,6 @@ import {
     CardMedia,
     CardActions,
     CardContent,
-    Button,
     Typography,
 } from "@material-ui/core";
 import ReadNews from "./ReadNews.js";
@@ -132,12 +131,10 @@ class Home extends Component {
                 <Switch>
                     <Route exact path="/">
                         <div className="App">
+                            <div className="header">
+                                <Typography variant="h4">{newsName}</Typography>
+                            </div>
                             <div className="container">
-                                <div className="header">
-                                    <Typography variant="h4">
-                                        {newsName}
-                                    </Typography>
-                                </div>
                                 <div className="newsContent">
                                     {newsItems && this.renderNews(newsItems)}
                                 </div>
